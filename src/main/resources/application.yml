@@ -1,0 +1,29 @@
+server:
+  port: 8083
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type: TRACE
+
+spring:
+  application:
+    name: appointment-service
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    #    JDBC : SGDB :// HOST : PORT / DB
+    url: jdbc:postgresql://appointments.ckanpx20f3i1.us-east-2.rds.amazonaws.com:5432/appointments
+    username: administrador
+    password: administrador
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    database: postgresql
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
